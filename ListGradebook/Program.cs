@@ -39,4 +39,3 @@ for (int i = 0; i < students.Count; i++)
 
 double avg = sum / students.Count;
 Console.WriteLine("Average grade: " + avg);
-

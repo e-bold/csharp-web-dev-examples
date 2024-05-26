@@ -1,12 +1,12 @@
 ﻿using System;
 namespace Cats
 {
-	public class Cat
+	public class Cat : IFeedable
 	{
         public bool Tired { get; set; } = false;
         public bool Hungry { get; set; } = false;
         public double Weight { get; set; }
-        public string Family { get; } = "Felidae";
+        public string Family { get;} = "Felidae";
 
         public Cat(double weight)
         {
@@ -14,7 +14,10 @@ namespace Cats
         }
 
         // TODO: On this line, add a no-argument constructor
-
+        public Cat()
+        {
+            Weight = 13.0;
+        }
         public void Sleep()
         {
             Tired = false;
@@ -23,6 +26,7 @@ namespace Cats
 
         public void Eat()
         {
+            Console.WriteLine("cat eating food");
             if (!Hungry)
             {
                 Tired = true;
